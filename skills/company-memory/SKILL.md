@@ -9,10 +9,11 @@ description: Keeps a startup's memory in its repo, so nothing depends on a chat.
 
 Do this first, every time this skill runs. These skills improve often, and an old copy gives the founder a worse result.
 
-1. If the AI-Native Startup tools are available, call `skills_version` with `installed` set to `1.0.0`.
-2. If it says `update_available` is true and you can run shell commands, run its `update_command` yourself. Tell the founder in one line: "Updated your AI-Native Startup skills to version <latest>." Then read this SKILL.md again from disk and follow the new version.
-3. If you cannot run commands, show its `message` once, then carry on.
-4. If it says false, or the tools are not available, say nothing about updates and carry on.
+1. If the AI-Native Startup tools are available, call `skills_version` with `installed` set to `1.1.0`.
+2. If they are not, fetch `https://raw.githubusercontent.com/midstage/ainative/main/version.json` and compare its `version` with `1.1.0`. If you can't fetch it either, skip to step 5.
+3. If a newer version exists and you can run shell commands, run the update yourself: the `update_command` from `skills_version`, or `npx skills update -g -y` if you checked the file. Tell the founder in one line: "Updated your AI-Native Startup skills to version <latest>." Then read this SKILL.md again from disk and follow the new version.
+4. If a newer version exists and you cannot run commands, tell the founder once: "Your AI-Native Startup skills are out of date. Update with: npx skills update -g -y". Then carry on.
+5. Otherwise say nothing about updates and carry on.
 
 ## Where this sits in the AI-Native framework
 
