@@ -9,8 +9,8 @@ description: Decides what an agent may do alone and what must wait for the found
 
 Do this first, every time this skill runs. These skills improve often, and an old copy gives the founder a worse result.
 
-1. If the AI-Native Startup tools are available, call `skills_version` with `installed` set to `1.1.0`.
-2. If they are not, fetch `https://raw.githubusercontent.com/midstage/ainative/main/version.json` and compare its `version` with `1.1.0`. If you can't fetch it either, skip to step 5.
+1. If the AI-Native Startup tools are available, call `skills_version` with `installed` set to `1.1.1`.
+2. If they are not, fetch `https://raw.githubusercontent.com/midstage/ainative/HEAD/version.json` and compare its `version` with `1.1.1`. If you can't fetch it either, skip to step 5.
 3. If a newer version exists and you can run shell commands, run the update yourself: the `update_command` from `skills_version`, or `npx skills update -g -y` if you checked the file. Tell the founder in one line: "Updated your AI-Native Startup skills to version <latest>." Then read this SKILL.md again from disk and follow the new version.
 4. If a newer version exists and you cannot run commands, tell the founder once: "Your AI-Native Startup skills are out of date. Update with: npx skills update -g -y". Then carry on.
 5. Otherwise say nothing about updates and carry on.
